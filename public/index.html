@@ -9,6 +9,10 @@
       integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
       crossorigin="anonymous"
     />
+    <meta
+      name="description"
+      content="This is a simple cryptography application."
+    />
     <title>Cryptography</title>
   </head>
   <body>
@@ -27,7 +31,12 @@
                   <label for="encodedInput" class="form-label"
                     >Text to Encode</label
                   >
-                  <input type="text" class="form-control" id="encodedInput" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="encodedInput"
+                    required
+                  />
                 </div>
 
                 <div class="mb-3">
@@ -38,6 +47,7 @@
                     value="3"
                     id="encodedKeyInput"
                     aria-describedby="keyHelp"
+                    required
                   />
                   <div id="keyHelp" class="form-text">
                     The default key value is 3 (Julius Caesar).
@@ -66,6 +76,7 @@
                     id="encodedText"
                     aria-describedby="copyPrompt"
                     disabled
+                    required
                   />
                   <div id="copyPrompt" class="form-text">
                     You can copy the encoded text above.
@@ -89,7 +100,12 @@
                   <label for="decodedInput" class="form-label"
                     >Text to Decode</label
                   >
-                  <input type="text" class="form-control" id="decodedInput" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="decodedInput"
+                    required
+                  />
                 </div>
 
                 <div class="mb-3">
