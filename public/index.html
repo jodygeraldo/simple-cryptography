@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <title>Cryptography</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-1 text-center">Cryptography</h1>
+
+      <hr />
+
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-2">
+          <div class="card">
+            <div class="card-header">Encode</div>
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="encodedInput" class="form-label"
+                    >Text to Encode</label
+                  >
+                  <input type="text" class="form-control" id="encodedInput" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="encodedKeyInput" class="form-label">Key</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    value="3"
+                    id="encodedKeyInput"
+                    aria-describedby="keyHelp"
+                  />
+                  <div id="keyHelp" class="form-text">
+                    The default key value is 3 (Julius Caesar).
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="originalText" class="form-label"
+                    >Original Text</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="originalText"
+                    disabled
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="encodedText" class="form-label"
+                    >Secret Code</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="encodedText"
+                    aria-describedby="copyPrompt"
+                    disabled
+                  />
+                  <div id="copyPrompt" class="form-text">
+                    You can copy the encoded text above.
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="encode">
+                  Encode
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">Decode</div>
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="decodedInput" class="form-label"
+                    >Text to Decode</label
+                  >
+                  <input type="text" class="form-control" id="decodedInput" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="decodedKeyInput" class="form-label">Key</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    value="3"
+                    id="decodedKeyInput"
+                    aria-describedby="keyHelp"
+                  />
+                  <div id="keyHelp" class="form-text">
+                    The default key value is 3 (Julius Caesar).
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="decodedText" class="form-label"
+                    >Original Text</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="decodedText"
+                    disabled
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="decode">
+                  Decode
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="playingAround.js"></script>
+  </body>
+</html>
