@@ -38,7 +38,7 @@ const decode = (text, k = 3) => {
     decoded.push(plainText[el])
   }
   decodedString = decoded.join('')
-  document.getElementById('decodedText').value = decodedString
+  document.getElementById('secretMessage').value = decodedString
 }
 
 const getCipherText = (k) => {
@@ -63,6 +63,7 @@ document.getElementById('decode').addEventListener('click', (e) => {
   e.preventDefault()
   const decodedInput = document.getElementById('decodedInput').value
   const decodedKeyInput = document.getElementById('decodedKeyInput').value
+  document.getElementById('decodedText').value = decodedInput
   decode(decodedInput, +decodedKeyInput)
   document.getElementById('decodedInput').value = ''
 })
