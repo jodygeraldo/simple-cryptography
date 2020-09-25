@@ -66,3 +66,22 @@ document.getElementById('decode').addEventListener('click', (e) => {
   decode(decodedInput, +decodedKeyInput)
   document.getElementById('decodedInput').value = ''
 })
+
+
+document.getElementById('decodedInput').addEventListener('input', (e) => {
+  const button = document.getElementById('decode')
+  if (e.target.value !== '') {
+    button.disabled = false
+  } else {
+    button.disabled = true
+  }
+})
+
+document.getElementById('encodedInput').addEventListener('input', (e) => {
+  const button = document.getElementById('encode')
+  if (e.target.value !== '') {
+    button.disabled = false
+  } else {
+    button.disabled = true
+  }
+})
