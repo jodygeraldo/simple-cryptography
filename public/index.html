@@ -94,10 +94,52 @@
 
       <hr />
 
+      <ul class="nav justify-content-center mb-4">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=".">Classic</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            tabindex="-1"
+            href="#"
+            aria-disabled="true"
+            >AES</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            tabindex="-1"
+            href="#"
+            aria-disabled="true"
+            >RSA</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >MD</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >SHA</a
+          >
+        </li>
+      </ul>
+
       <div class="row justify-content-center">
         <div class="col-md-4 mb-2">
           <div class="card">
-            <div class="card-header">Encode</div>
+            <div class="card-header">Encryption</div>
             <div class="card-body">
               <form>
                 <div class="mb-3">
@@ -156,7 +198,12 @@
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="encode" disabled>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="encode"
+                  disabled
+                >
                   Encode
                 </button>
               </form>
@@ -164,9 +211,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 mb-2">
           <div class="card">
-            <div class="card-header">Decode</div>
+            <div class="card-header">Decryption</div>
             <div class="card-body">
               <form>
                 <div class="mb-3">
@@ -196,9 +243,7 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="decodedText" class="form-label"
-                    >The Code</label
-                  >
+                  <label for="decodedText" class="form-label">The Code</label>
                   <input
                     type="text"
                     class="form-control"
@@ -231,6 +276,12 @@
               </form>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-2">
+        <div class="alert alert-info text-center" role="alert">
+          The rotation is from whitespace, A to Z, and a to z.
         </div>
       </div>
     </div>
